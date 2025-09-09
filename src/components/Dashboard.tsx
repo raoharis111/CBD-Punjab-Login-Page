@@ -13,6 +13,7 @@ import { motion } from "motion/react";
 import { ImageWithFallback } from "./figma/ImageWithFallback";
 import pmInaugurationImage from '../assets/pmInaugurationImage.jpeg';
 import lahoreGlobalVillageImage from '../assets/lahoreGlobalVillageImage.jpeg';
+import nsit from '../assets/nsit.jpeg';
 
 import { 
   Plus, 
@@ -118,17 +119,17 @@ export default function Dashboard({ onNavigate, onUpdateData }: DashboardProps) 
       likes: 156,
       comments: 23
     },
-    {
-      id: 2,
-      type: "news",
-      title: "CBD Punjab Unveiled the Lahore Global Village During a Prestigious Investor Summit Graced by the Presence of CM Punjab",
-      excerpt: "PCBDDA organized an Investor Summit for the highly anticipated Lahore Global Village (LGV) project to attract potential buyers",
-      date: "15 March 2023",
-      category: "Investment",
-      image: lahoreGlobalVillageImage,
-      likes: 198,
-      comments: 34
-    }
+    // {
+    //   id: 2,
+    //   type: "news",
+    //   title: "CBD Punjab Unveiled the Lahore Global Village During a Prestigious Investor Summit Graced by the Presence of CM Punjab",
+    //   excerpt: "PCBDDA organized an Investor Summit for the highly anticipated Lahore Global Village (LGV) project to attract potential buyers",
+    //   date: "15 March 2023",
+    //   category: "Investment",
+    //   image: lahoreGlobalVillageImage,
+    //   likes: 198,
+    //   comments: 34
+    // }
   ];
 
   const newsItems = [
@@ -152,12 +153,12 @@ export default function Dashboard({ onNavigate, onUpdateData }: DashboardProps) 
     },
     {
       id: 3,
-      title: "Investment Opportunities in Green Buildings",
-      excerpt: "CBD Punjab announces new incentives for environmentally sustainable construction projects.",
+      title: "Investment Opportunities in Nawaz Sharif IT City",
+      excerpt: "CBD Punjab announces new incentives for NSIT projects.",
       date: "December 15, 2024",
       category: "Investment",
       readTime: "5 min read",
-      image: "https://images.unsplash.com/photo-1652565436975-5ac0c22fb3ee?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxidXNpbmVzcyUyMG1lZXRpbmclMjBvZmZpY2UlMjBwYWtpc3RhbnxlbnwxfHx8fDE3NTc0MTMzNTd8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+      image: nsit
     }
   ];
 
