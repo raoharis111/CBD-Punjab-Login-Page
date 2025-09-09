@@ -1,3 +1,4 @@
+import React from "react";
 import backgroundImage from "./assets/4dddf96460095568287aea0b16ed64cf2de1e273.png";
 import cbdLogo from "./assets/CBDLogoWhite.avif";
 import { Button } from "./components/ui/button";
@@ -30,6 +31,7 @@ import PlotCategorySelection from "./components/PlotCategorySelection";
 import ApplicationReview from "./components/ApplicationReview";
 import TermsAndConditions from "./components/TermsAndConditions";
 import PaymentPage from "./components/PaymentPage";
+import ApplicationView from "./components/ApplicationView";
 
 export default function App() {
   const [currentScreen, setCurrentScreen] = useState<string>('login');
@@ -37,7 +39,8 @@ export default function App() {
     profile: {},
     selectedProperty: null,
     plotCategories: [],
-    totalFees: 0
+    totalFees: 0,
+    selectedApplicationNo: null
   });
 
   const handleLogin = () => {
@@ -706,7 +709,10 @@ export default function App() {
         {/* Screen Content */}
         <div className="flex-1 pb-8">
           {currentScreen === 'dashboard' && (
-            <Dashboard onNavigate={navigateToScreen} />
+            <Dashboard 
+              onNavigate={navigateToScreen} 
+              onUpdateData={updateApplicationData}
+            />
           )}
           {currentScreen === 'applicant-profile' && (
             <ApplicantProfile 
@@ -744,6 +750,12 @@ export default function App() {
             <PaymentPage 
               onNavigate={navigateToScreen} 
               data={applicationData}
+            />
+          )}
+          {currentScreen === 'application-view' && (
+            <ApplicationView 
+              onNavigate={navigateToScreen} 
+              applicationNo={applicationData.selectedApplicationNo}
             />
           )}
         </div>
